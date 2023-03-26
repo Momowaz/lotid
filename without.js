@@ -1,3 +1,11 @@
+const assertArraysEqual = function (actual, expected) {
+    if (without(actual, expected)) {
+        console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    } else {
+        console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    }
+};
+
 const without = function (source, itemsToRemove) {
     let filterdArray = [];
 
@@ -18,6 +26,10 @@ const without = function (source, itemsToRemove) {
 
     return filterdArray;
 }
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 console.log(without([1, 2, 3], [1])) // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"]))

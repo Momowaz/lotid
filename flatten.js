@@ -1,14 +1,8 @@
+let _ = require('lodash');
+
 const flatten = function (arr) {
     let flattenedArray = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        if (Array.isArray(arr[i])) {
-            flattenedArray = flattenedArray.concat(flatten(arr[i]));
-        } else {
-            flattenedArray.push(arr[i]);
-        }
-    }
-
+        flattenedArray = _.flattenDeep(arr);
     return flattenedArray;
 }
 

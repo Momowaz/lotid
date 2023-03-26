@@ -9,23 +9,22 @@ const assertEqual = function (actual, expected) {
 };
 
 const countLetters = function (sentence) {
-    const result = {};
+    let result = {};
     for (let char of sentence) {
-        if (char !== ' ') {
-            if (assertEqual(1, 2)) {
-                console.log('me ', result[char] + 1);
+        if (char !== " ") {
+            if (result[char]) {
+                result[char] += 1;
+            } else {
+                result[char] = 1;
             }
-            // else {
-            //     console.log('him ', result[char]);
-            // // }
-            
         }
     }
     return result;
-}
+};
 
-// const result1 = countLetters("lighthouse in the house");
+const result1 = countLetters("lighthouse in the house");
 
-// assertEqual(result1, )
+assertEqual(result1["l"], 2);
+assertEqual(result1["i"], 2);
 
-countLetters("lighthouse in the house");
+console.log(countLetters("lighthouse in the house"));
