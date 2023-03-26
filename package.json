@@ -1,4 +1,5 @@
 {
+  "name": "@mohib-lhl-org/lotide",
   "version": "1.0.0",
   "description": "a mini-clone of lodash, from a lighthouse labs dev-in-training",
   "directories": {

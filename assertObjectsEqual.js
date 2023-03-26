@@ -10,11 +10,12 @@ const assertEquals = function (actual, expected) {
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
-  if (JSON.stringify(actual) === JSON.stringify(expected)) {
-    return true;
-  } else {
+  for (let key in actual) {
+    if (actual[key] === expected[key]) {
+        return true;
+    }
     return false;
-  }
+}
 };
 
 const shirtObject = { a: "1", b: "2" };
