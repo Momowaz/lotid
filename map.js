@@ -34,3 +34,5 @@ const map = function(array, callback) {
 const result1 = map(words, word => word[0]);
 
 assertArraysEqual(result1, expectedArray);
+
+//console.log(result1);
