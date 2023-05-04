@@ -13,6 +13,7 @@ This project was created and published by me as part of my learnings at Lighthou
 **Install it:**
 
 `npm install @Momowaz/lotide`
+https://www.npmjs.com/package/@mohib-lhl-org/lotide
 
 **Require it:**
 
