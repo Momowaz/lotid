@@ -1,12 +1,5 @@
-const assertEqual = function (actual, expected) {
-    if (actual === expected) {
-        console.assert(actual === expected);
-        console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-        console.assert(actual !== expected);
-        console.log(`🛑🛑🛑 Assertion Failed: ${actual} !=== ${expected}`);
-    }
-};
+const assertEqual = require('./assertEqual');
+
 const countOnly = function (allItems, itemsToCount) {
     const results = {}
     for (const item of allItems) {
@@ -17,7 +10,7 @@ const countOnly = function (allItems, itemsToCount) {
                 results[item] = 1;
             }
         }
-        console.log('item is ', item);
+        console.log(item);
     }
     return results;
 }

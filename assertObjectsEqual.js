@@ -1,24 +1,16 @@
-const assertEquals = function (actual, expected) {
-  if (actual === expected) {
-    console.assert(actual === expected);
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.assert(actual !== expected);
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !=== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   for (let key in actual) {
     if (actual[key] === expected[key]) {
-        return true;
+        assertEqual(true, true);
     }
-    return false;
-}
+  }
+  assertEqual(true, false);
 };
 
 const shirtObject = { a: "1", b: "2" };
 const anotherShirtObject= { b: "2", a: "1" };
-const result = assertObjectsEqual(shirtObject , anotherShirtObject);
-assertEquals(result, true);
+assertObjectsEqual(shirtObject , anotherShirtObject);
+
