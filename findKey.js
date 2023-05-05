@@ -2,9 +2,12 @@ let _ = require('lodash');
 const assertEqual = require('./assertEqual');
 
 const findKey = function (obj, callback) {
-
-    const key = _.findKey(obj, callback);
-    return key;
+    for (const key in obj) {
+        if (callback(obj[key])) {
+            return key;
+        }
+    }
+    return undefined;
 }
 
  const key = findKey({
@@ -17,5 +20,5 @@ const findKey = function (obj, callback) {
 }, x => x.stars === 2)
 
 
-console.log(key)
+// console.log(key)
 assertEqual(key, "noma")
