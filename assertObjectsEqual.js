@@ -14,3 +14,4 @@ const shirtObject = { a: "1", b: "2" };
 const anotherShirtObject= { b: "2", a: "1" };
 assertObjectsEqual(shirtObject , anotherShirtObject);
 
+module.exports = assertObjectsEqual;

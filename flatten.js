@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 const flatten = function (arr) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < arr.length; i++) {
         if (Array.isArray(arr[i])) {
         //If it is an array, it calls itself recursively to flatten subarray.

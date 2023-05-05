@@ -1,12 +1,10 @@
 {
   "name": "@mohib-lhl-org/lotide",
-  "version": "1.0.0",
-  "description": "a mini-clone of lodash, from a lighthouse labs dev-in-training",
+  "version": "1.0.3",
+  "description": "lotide project",
+  "main": "index.js",
   "directories": {
     "test": "test"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "chai": "^4.2.0",

@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 const countLetters = function (sentence) {
-    let result = {};
+    const result = {};
     for (let char of sentence) {
         if (char !== " ") {
             if (result[char]) {
@@ -20,3 +20,5 @@ assertEqual(result1["l"], 2);
 assertEqual(result1["i"], 2);
 
 console.log(countLetters("lighthouse in the house"));
+
+module.exports = countLetters;

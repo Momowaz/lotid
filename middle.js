@@ -1,5 +1,5 @@
 const middle = function (arr) {
-    let emptyArray = [];
+    const emptyArray = [];
 
     if (arr.length < 3) {
         return emptyArray;
