@@ -1,9 +1,12 @@
-let _ = require('lodash');
+const _ = require('lodash');
+const assertEqual = require('./assertEqual');
 
 const flatten = function (arr) {
     let flattenedArray = [];
-        flattenedArray = _.flattenDeep(arr);
+    flattenedArray = _.flattenDeep(arr);
     return flattenedArray;
 }
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [2, 3]
+const result = flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+assertEqual(result, [1, 2, 3, 4, 5, 6]);
+
